@@ -40,11 +40,11 @@ export default function HomePage() {
               <CardContent className="p-0">
                 <Image
                   src="https://placehold.co/600x400.png"
-                  alt="Equipe CAVPM"
+                  alt="Helicóptero da CAVPM PR-ISI no heliponto"
                   width={600}
                   height={400}
                   className="object-cover w-full h-full"
-                  data-ai-hint="police helicopter team"
+                  data-ai-hint="police helicopter"
                 />
               </CardContent>
             </Card>
