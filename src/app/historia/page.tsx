@@ -18,14 +18,16 @@ export default function HistoriaPage() {
             Uma jornada de dedicação e evolução a serviço da comunidade.
           </CardDescription>
         </CardHeader>
+        <Image
+          src={heliImage}
+          alt="Marco histórico da CAVPM"
+          width={1024} // Original width for aspect ratio
+          height={1536} // Original height for aspect ratio
+          className="rounded-lg object-contain w-full max-h-[360px] mb-6 shadow-md"
+          priority // Good to add for LCP images
+        />
         <CardContent className="space-y-4">
-          <Image
-            src={heliImage}
-            alt="Marco histórico da CAVPM"
-            width={1024}
-            height={1536}
-            className="rounded-lg object-contain h-auto w-full max-h-[360px] mb-6 shadow-md"
-          />
+          {/* Image component was moved above CardContent */}
           {HISTORY_PLACEHOLDER.split('\n\n').map((paragraph, index) => (
             <p key={index} className="text-base leading-relaxed text-foreground/90">
               {paragraph}
