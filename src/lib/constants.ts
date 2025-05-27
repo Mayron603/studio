@@ -54,6 +54,10 @@ Dentre os marcos históricos, destacam-se a atuação heroica durante as enchent
 Hoje, a CAVPM é uma unidade de elite, equipada e preparada para os mais diversos cenários, reafirmando diariamente seu compromisso com a proteção da sociedade de Grande Metrópole, honrando o lema: "Voar para Servir e Proteger".
 `;
 
+export const REGULATIONS_PLACEHOLDER = `
+Esta seção detalha os regulamentos internos que governam as operações, conduta e procedimentos da Coordenadoria de Aviação da Polícia Militar (CAVPM). Estes regulamentos são fundamentais para manter a ordem, a disciplina, a segurança e a eficiência em todas as atividades da unidade. O conhecimento e a adesão a estas normas são obrigatórios para todos os membros. Consulte os documentos específicos abaixo para informações detalhadas sobre cada área.
+`;
+
 export interface RegulationInfo {
   id: string;
   title: string;
