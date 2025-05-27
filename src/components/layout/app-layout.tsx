@@ -39,6 +39,9 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+// Import the logo from the project root
+import logoImage from '../../../logo.png';
+
 const navItems: NavItem[] = [
   { href: "/", label: "Início", icon: LayoutDashboard },
   { href: "/historia", label: "História", icon: ScrollText },
@@ -62,9 +65,9 @@ export function AppLayout({ children }: AppLayoutProps) {
           <Link href="/" className="flex items-center gap-2 text-sidebar-foreground hover:text-sidebar-accent-foreground transition-colors">
             <div className="bg-white p-1 rounded-sm flex items-center justify-center group-data-[collapsible=icon]:p-0.5">
               <Image
-                src="/logo.png" 
+                src={logoImage}
                 alt={`${APP_NAME} Logo`}
-                width={32} 
+                width={32}
                 height={32}
                 className="group-data-[collapsible=icon]:w-6 group-data-[collapsible=icon]:h-6"
               />
