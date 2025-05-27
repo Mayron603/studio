@@ -63,13 +63,13 @@ export function AppLayout({ children }: AppLayoutProps) {
       <Sidebar className="border-r border-sidebar-border" collapsible="icon">
         <SidebarHeader className="p-4 border-b border-sidebar-border">
           <Link href="/" className="flex items-center gap-2 text-sidebar-foreground hover:text-sidebar-accent-foreground transition-colors">
-            <div className="bg-white p-1 rounded-sm flex items-center justify-center group-data-[collapsible=icon]:p-0.5">
+            <div className="bg-white p-px rounded-sm flex items-center justify-center">
               <Image
                 src={logoImage}
                 alt={`${APP_NAME} Logo`}
-                width={32}
-                height={32}
-                className="group-data-[collapsible=icon]:w-6 group-data-[collapsible=icon]:h-6"
+                width={408}
+                height={612}
+                className="h-7 w-auto group-data-[collapsible=icon]:h-6 group-data-[collapsible=icon]:w-auto"
               />
             </div>
             <span className="text-lg font-semibold group-data-[collapsible=icon]:hidden">{APP_NAME}</span>
