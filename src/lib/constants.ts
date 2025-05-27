@@ -27,7 +27,7 @@ export interface DocumentInfo {
 export const DOCUMENTS: DocumentInfo[] = [
   {
     id: "manual-conduta",
-    title: "Manual de Conduta CAVPM",
+    title: "Manual de Conduta - CAVPM",
     slug: "manual-de-conduta",
     description: "Diretrizes e normas de comportamento para os membros da CAVPM.",
     placeholderContent: "O Manual de Conduta da CAVPM estabelece os padrões de comportamento, ética e disciplina esperados de todos os membros da Coordenadoria de Aviação da Polícia Militar. Este documento serve como guia fundamental para assegurar a integridade, o profissionalismo e a excelência nas operações e no dia a dia da unidade. Abrange desde a apresentação pessoal, uso de uniformes, relações interpessoais, até a conduta em missões e o manuseio de equipamentos e informações sigilosas. A adesão estrita a este manual é crucial para manter a reputação e a eficiência da CAVPM.",
@@ -35,7 +35,7 @@ export const DOCUMENTS: DocumentInfo[] = [
   },
   {
     id: "manual-instrucao",
-    title: "MANUAL DE INSTRUÇÃO TEÓRICA - CAVPM",
+    title: "Manual de Instrução Teórica - CAVPM",
     slug: "manual-de-instrucao-teorica",
     description: "Material de estudo e referência para a formação teórica na CAVPM.",
     placeholderContent: "O Manual de Instrução Teórica da CAVPM é um compêndio abrangente de conhecimentos essenciais para a formação e capacitação contínua dos profissionais da aviação policial. Este manual cobre uma vasta gama de tópicos, incluindo, mas não se limitando a: aerodinâmica, meteorologia, navegação aérea, regulamentos de tráfego aéreo, procedimentos de emergência, fisiologia de voo, e especificações técnicas das aeronaves operadas pela CAVPM. Serve como base para o aprendizado teórico, complementando o treinamento prático e garantindo que todos os membros possuam o conhecimento necessário para operar com segurança e eficácia.",
@@ -79,3 +79,4 @@ export interface NavItem {
   icon: LucideIcon;
   keywords?: string; // for AI hint on icon if needed
 }
+
