@@ -39,7 +39,7 @@ export default function HomePage() {
              <Card className="overflow-hidden">
               <CardContent className="p-0">
                 <Image
-                  src="https://i.imgur.com/w9qX1Z9.jpeg" // User's helicopter image
+                  src="https://placehold.co/600x400.png"
                   alt="Helicóptero da Coordenadoria de Aviação da Polícia Militar (CAVPM)"
                   width={600}
                   height={400}

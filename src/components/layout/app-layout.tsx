@@ -3,7 +3,7 @@
 
 import type { ReactNode } from "react";
 import Link from "next/link";
-import Image from "next/image"; // Added Image import
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   SidebarProvider,
@@ -25,7 +25,6 @@ import {
   Users,
   FileText,
   ClipboardEdit,
-  // Shield, // Shield is replaced by Image
   Settings,
   LogOut,
 } from "lucide-react";
@@ -62,7 +61,7 @@ export function AppLayout({ children }: AppLayoutProps) {
         <SidebarHeader className="p-4 border-b border-sidebar-border">
           <Link href="/" className="flex items-center gap-2 text-sidebar-foreground hover:text-sidebar-accent-foreground transition-colors">
             <Image
-              src="https://media.discordapp.net/attachments/1110324893750403072/1376969346085290054/assets2Ftask_01jvwj7pk9e0esy1sw0p3z94vd2F1747936670_img_0-removebg-preview.png?ex=68374222&is=6835f0a2&hm=e9b22d9be734d0fbcbde352a42acaaf4e922c67a5dc6330e7ef9af8bd307e2af&=&format=webp&quality=lossless" // New Discord logo
+              src="https://placehold.co/32x32.png"
               alt={`${APP_NAME} Logo`}
               width={32}
               height={32}
