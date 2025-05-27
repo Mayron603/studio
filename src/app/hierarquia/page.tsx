@@ -33,13 +33,13 @@ export default function HierarquiaPage() {
               if (level === "Comando de Unidade") {
                 personnelInfo = (
                   <>
-                    <p className="text-sm font-medium text-foreground/80 mt-1">Comandante: 3SGT Tinga Tava</p>
-                    <p className="text-sm font-medium text-foreground/80">Subcomandante: {SUB_COMMAND_NAME}</p>
+                    <p className="text-sm font-medium text-foreground/80 mt-1">Comandante: 3º Sargento. Tinga Tava</p>
+                    <p className="text-sm font-medium text-foreground/80">Subcomandante: Cabo. David Silva</p>
                   </>
                 );
               } else if (level === "Comandante Sênior") {
                 personnelInfo = (
-                  <p className="text-sm font-medium text-foreground/80 mt-1">Albert Patrick</p>
+                  <p className="text-sm font-medium text-foreground/80 mt-1">Cabo. Albert Patrick</p>
                 );
               }
 
@@ -65,4 +65,3 @@ export default function HierarquiaPage() {
     </div>
   );
 }
-

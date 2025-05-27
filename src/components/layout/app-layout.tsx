@@ -124,7 +124,7 @@ export function AppLayout({ children }: AppLayoutProps) {
       </Sidebar>
       <SidebarInset className="flex flex-col">
         <header className="sticky top-0 z-10 flex items-center justify-between h-16 px-4 bg-background/80 backdrop-blur-sm border-b md:px-6">
-          <div className="md:hidden">
+          <div> {/* Removed md:hidden to make trigger visible on desktop */}
              <SidebarTrigger />
           </div>
           <div className="flex-1 text-center md:text-left">
