@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { COMMAND_NAME, SUB_COMMAND_NAME, APP_NAME } from "@/lib/constants";
 import { Users, ShieldCheck } from "lucide-react";
 import Image from "next/image";
+import heliImage from '../../heli.png';
 
 export default function HomePage() {
   return (
@@ -39,12 +40,11 @@ export default function HomePage() {
              <Card className="overflow-hidden">
               <CardContent className="p-0">
                 <Image
-                  src="https://placehold.co/600x400.png"
+                  src={heliImage}
                   alt="Helicóptero da Coordenadoria de Aviação da Polícia Militar (CAVPM)"
                   width={600}
                   height={400}
                   className="object-cover w-full h-full"
-                  data-ai-hint="police helicopter"
                 />
               </CardContent>
             </Card>

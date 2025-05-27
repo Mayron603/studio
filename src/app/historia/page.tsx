@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { HISTORY_PLACEHOLDER } from "@/lib/constants";
 import { ScrollText } from "lucide-react";
 import Image from "next/image";
+import heliImage from '../../../heli.png';
 
 export default function HistoriaPage() {
   return (
@@ -19,12 +20,11 @@ export default function HistoriaPage() {
         </CardHeader>
         <CardContent className="space-y-4">
           <Image 
-            src="https://placehold.co/800x400.png" 
+            src={heliImage} 
             alt="Marco histórico da CAVPM"
             width={800}
             height={400}
             className="rounded-lg object-cover w-full mb-6 shadow-md"
-            data-ai-hint="historical archive photo"
           />
           {HISTORY_PLACEHOLDER.split('\n\n').map((paragraph, index) => (
             <p key={index} className="text-base leading-relaxed text-foreground/90">
