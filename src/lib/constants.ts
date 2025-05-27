@@ -1,7 +1,7 @@
 
 import type { LucideIcon } from 'lucide-react';
 
-export const APP_NAME = "CAVPM Digital";
+export const APP_NAME = "CAVPM";
 export const COMMAND_NAME = "Tinga Tava";
 export const SUB_COMMAND_NAME = "David Silva";
 

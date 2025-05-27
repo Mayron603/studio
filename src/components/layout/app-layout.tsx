@@ -60,14 +60,15 @@ export function AppLayout({ children }: AppLayoutProps) {
       <Sidebar className="border-r border-sidebar-border" collapsible="icon">
         <SidebarHeader className="p-4 border-b border-sidebar-border">
           <Link href="/" className="flex items-center gap-2 text-sidebar-foreground hover:text-sidebar-accent-foreground transition-colors">
-            <Image
-              src="https://placehold.co/32x32.png"
-              alt={`${APP_NAME} Logo`}
-              width={32}
-              height={32}
-              className="group-data-[collapsible=icon]:w-6 group-data-[collapsible=icon]:h-6"
-              data-ai-hint="app logo"
-            />
+            <div className="bg-white p-1 rounded-sm flex items-center justify-center group-data-[collapsible=icon]:p-0.5">
+              <Image
+                src="/logo.png" 
+                alt={`${APP_NAME} Logo`}
+                width={32} 
+                height={32}
+                className="group-data-[collapsible=icon]:w-6 group-data-[collapsible=icon]:h-6"
+              />
+            </div>
             <span className="text-lg font-semibold group-data-[collapsible=icon]:hidden">{APP_NAME}</span>
           </Link>
         </SidebarHeader>
