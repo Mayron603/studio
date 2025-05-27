@@ -129,8 +129,6 @@ export interface AircraftInfo {
   name: string;
   type: string;
   description: string;
-  imageUrl: string;
-  aiHint: string;
   specifications: { label: string; value: string }[];
 }
 
@@ -139,39 +137,15 @@ export const FLEET_DATA: AircraftInfo[] = [
     id: "as350",
     name: "Helibras AS350 Esquilo",
     type: "Helicóptero Utilitário Leve",
-    description: "Versátil e ágil, o AS350 Esquilo é amplamente utilizado para patrulhamento, observação, transporte rápido e missões de apoio. Sua confiabilidade o torna uma peça chave na frota.",
-    imageUrl: "https://placehold.co/600x400.png",
-    aiHint: "police helicopter",
+    description: "Versátil e ágil, o AS350 Esquilo é amplamente utilizado para patrulhamento, observação, transporte rápido e missões de apoio. Sua confiabilidade o torna a peça chave na frota da CAVPM, operando com excelência em diversas condições.",
     specifications: [
       { label: "Capacidade", value: "1 Piloto + 5 Passageiros" },
-      { label: "Velocidade de Cruzeiro", value: "245 km/h" },
-      { label: "Autonomia", value: "Aprox. 3 horas" },
-    ],
-  },
-  {
-    id: "ec135",
-    name: "Airbus H135 (anteriormente Eurocopter EC135)",
-    type: "Helicóptero Utilitário Leve Bimotor",
-    description: "O H135 é conhecido por sua cabine espaçosa, baixo nível de ruído e performance superior, especialmente em missões aeromédicas e operações policiais que exigem mais capacidade e segurança.",
-    imageUrl: "https://placehold.co/600x400.png",
-    aiHint: "rescue helicopter",
-    specifications: [
-      { label: "Capacidade", value: "1/2 Pilotos + até 6 Passageiros ou 2 macas" },
-      { label: "Velocidade de Cruzeiro", value: "254 km/h" },
-      { label: "Autonomia", value: "Aprox. 3.5 horas" },
-    ],
-  },
-  {
-    id: "kingairc90",
-    name: "Beechcraft King Air C90",
-    type: "Aeronave de Asa Fixa Bimotor Turboélice",
-    description: "Utilizado para transporte de autoridades, equipes especializadas e material para longas distâncias. Oferece maior alcance e capacidade de carga em comparação com os helicópteros.",
-    imageUrl: "https://placehold.co/600x400.png",
-    aiHint: "turboprop plane",
-    specifications: [
-      { label: "Capacidade", value: "1/2 Pilotos + até 7 Passageiros" },
-      { label: "Velocidade de Cruzeiro", value: "400 km/h" },
-      { label: "Alcance", value: "Aprox. 1.800 km" },
+      { label: "Velocidade de Cruzeiro", value: "245 km/h (132 kt)" },
+      { label: "Autonomia", value: "Aprox. 3 horas / 660 km" },
+      { label: "Motor", value: "Turbomeca Arriel 2B" },
+      { label: "Peso Máx. Decolagem", value: "2.250 kg (4.960 lb)" },
+      { label: "Função Principal", value: "Multimissão (Patrulha, Resgate, Transporte)" },
     ],
   },
 ];
+

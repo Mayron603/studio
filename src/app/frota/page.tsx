@@ -5,6 +5,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { FLEET_DATA, APP_NAME } from "@/lib/constants";
 import { PlaneTakeoff, Info } from "lucide-react";
+import heliImage from '../../../heli.png'; // Importando a imagem local
 
 export default function FrotaPage() {
   return (
@@ -16,14 +17,15 @@ export default function FrotaPage() {
             <CardTitle className="text-3xl font-bold">Nossa Frota Aérea</CardTitle>
           </div>
           <CardDescription className="text-lg">
-            Conheça as aeronaves que compõem a frota da {APP_NAME}.
+            Conheça a aeronave que compõe a frota da {APP_NAME}.
           </CardDescription>
         </CardHeader>
         <CardContent>
           <p className="mb-6 text-base leading-relaxed text-foreground/90">
-            A {APP_NAME} opera uma frota diversificada de aeronaves para atender às variadas demandas
-            das operações de segurança pública. Cada aeronave é mantida com os mais altos padrões
-            e equipada para missões específicas, garantindo eficiência e segurança.
+            A {APP_NAME} opera com o modelo Helibras AS350 Esquilo, uma aeronave versátil e confiável, 
+            para atender às variadas demandas das operações de segurança pública. 
+            Esta aeronave é mantida com os mais altos padrões e equipada para missões específicas, 
+            garantindo eficiência e segurança.
           </p>
         </CardContent>
       </Card>
@@ -33,12 +35,13 @@ export default function FrotaPage() {
           <Card key={aircraft.id} className="shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col lg:flex-row">
             <div className="relative w-full lg:w-2/5 h-64 lg:h-auto rounded-t-lg lg:rounded-l-lg lg:rounded-t-none overflow-hidden">
               <Image
-                src={aircraft.imageUrl}
+                src={heliImage} // Usando a imagem importada
                 alt={`Imagem da aeronave ${aircraft.name}`}
                 fill
                 style={{ objectFit: "cover" }}
                 className="transition-transform duration-500 hover:scale-105"
-                data-ai-hint={aircraft.aiHint}
+                data-ai-hint="police helicopter" // Dica para IA
+                priority
               />
             </div>
             <div className="flex flex-col flex-1">
@@ -53,7 +56,7 @@ export default function FrotaPage() {
                     <Info className="w-5 h-5 mr-2 text-primary/80" />
                     Especificações Principais:
                   </h4>
-                  <ScrollArea className="h-32 rounded-md border p-3 bg-muted/30">
+                  <ScrollArea className="h-40 rounded-md border p-3 bg-muted/30">
                     <ul className="space-y-1.5 text-sm">
                       {aircraft.specifications.map((spec) => (
                         <li key={spec.label}>
@@ -74,8 +77,8 @@ export default function FrotaPage() {
         </CardHeader>
         <CardContent>
           <p className="text-sm text-accent-foreground">
-            As informações e imagens apresentadas nesta seção são para fins ilustrativos e podem não representar
-            exatamente as configurações ou modelos específicos em operação na {APP_NAME} em todos os momentos.
+            As informações e imagem apresentadas nesta seção são para fins ilustrativos e representam
+            o modelo em operação na {APP_NAME}.
             A frota está sujeita a atualizações e manutenções.
           </p>
         </CardContent>
