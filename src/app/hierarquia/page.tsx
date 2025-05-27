@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { HIERARCHY_LEVELS } from "@/lib/constants";
+import { HIERARCHY_LEVELS, SUB_COMMAND_NAME } from "@/lib/constants";
 import { Users, ChevronUp, Star, Shield, ShieldCheck } from "lucide-react";
 
 // A more fitting icon for highest rank
@@ -28,6 +28,21 @@ export default function HierarquiaPage() {
           <div className="space-y-4">
             {HIERARCHY_LEVELS.map((level, index) => {
               const IconComponent = icons[index % icons.length] || Users; // Fallback icon
+              let personnelInfo = null;
+
+              if (level === "Comando de Unidade") {
+                personnelInfo = (
+                  <>
+                    <p className="text-sm font-medium text-foreground/80 mt-1">Comandante: 3SGT Tinga Tava</p>
+                    <p className="text-sm font-medium text-foreground/80">Subcomandante: {SUB_COMMAND_NAME}</p>
+                  </>
+                );
+              } else if (level === "Comandante Sênior") {
+                personnelInfo = (
+                  <p className="text-sm font-medium text-foreground/80 mt-1">Albert Patrick</p>
+                );
+              }
+
               return (
                 <Card key={level} className="transition-all hover:shadow-md">
                   <CardContent className="p-4 flex items-center space-x-4">
@@ -36,7 +51,8 @@ export default function HierarquiaPage() {
                     </div>
                     <div className="flex-grow">
                       <h3 className="text-lg font-semibold text-primary">{level}</h3>
-                      <p className="text-sm text-muted-foreground">Nível {index + 1} da estrutura hierárquica.</p>
+                      {personnelInfo}
+                      <p className="text-sm text-muted-foreground mt-1">Nível {index + 1} da estrutura hierárquica.</p>
                     </div>
                     <ChevronUp className="w-5 h-5 text-muted-foreground transform rotate-90" />
                   </CardContent>
@@ -49,3 +65,4 @@ export default function HierarquiaPage() {
     </div>
   );
 }
+
