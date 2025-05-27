@@ -3,6 +3,7 @@
 
 import type { ReactNode } from "react";
 import Link from "next/link";
+import Image from "next/image"; // Added Image import
 import { usePathname } from "next/navigation";
 import {
   SidebarProvider,
@@ -24,7 +25,7 @@ import {
   Users,
   FileText,
   ClipboardEdit,
-  Shield,
+  // Shield, // Shield is replaced by Image
   Settings,
   LogOut,
 } from "lucide-react";
@@ -60,7 +61,14 @@ export function AppLayout({ children }: AppLayoutProps) {
       <Sidebar className="border-r border-sidebar-border" collapsible="icon">
         <SidebarHeader className="p-4 border-b border-sidebar-border">
           <Link href="/" className="flex items-center gap-2 text-sidebar-foreground hover:text-sidebar-accent-foreground transition-colors">
-            <Shield className="w-8 h-8 text-sidebar-primary-foreground group-data-[collapsible=icon]:w-6 group-data-[collapsible=icon]:h-6" />
+            <Image
+              src="https://i.imgur.com/5F11xT6.png" // User's logo
+              alt={`${APP_NAME} Logo`}
+              width={32}
+              height={32}
+              className="group-data-[collapsible=icon]:w-6 group-data-[collapsible=icon]:h-6"
+              data-ai-hint="app logo"
+            />
             <span className="text-lg font-semibold group-data-[collapsible=icon]:hidden">{APP_NAME}</span>
           </Link>
         </SidebarHeader>
