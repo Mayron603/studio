@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { COMMAND_NAME, SUB_COMMAND_NAME, APP_NAME, QUICK_LINKS } from "@/lib/constants";
-import { Users, ShieldCheck, Target, ArrowRight, FileText, Gavel, ClipboardEdit } from "lucide-react";
+import { Users, ShieldCheck, Target, ArrowRight, FileText, Gavel, ClipboardEdit, Contact } from "lucide-react";
 
 // Helper to map icon names from constants to actual components
 const iconMap: { [key: string]: React.ElementType } = {
@@ -37,8 +37,8 @@ export default function HomePage() {
               <CardTitle className="text-xl">Comando da Unidade</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="font-semibold">Comando: {COMMAND_NAME}</p>
-              <p className="font-semibold">SubComando: {SUB_COMMAND_NAME}</p>
+              <p className="font-semibold">Comandante: 3º Sargento. {COMMAND_NAME}</p>
+              <p className="font-semibold">Subcomandante: Cabo. {SUB_COMMAND_NAME}</p>
             </CardContent>
           </Card>
         </CardContent>
@@ -93,6 +93,21 @@ export default function HomePage() {
               );
             })}
           </div>
+        </CardContent>
+      </Card>
+
+      <Card className="shadow-md">
+        <CardHeader className="flex flex-row items-center space-x-3">
+          <Contact className="w-8 h-8 text-primary" />
+          <CardTitle className="text-2xl font-bold">Contato (Discord)</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-2">
+          <p className="text-base text-foreground/90">
+            <span className="font-semibold">Tinga:</span> mayron.x
+          </p>
+          <p className="text-base text-foreground/90">
+            <span className="font-semibold">David:</span> lucassc2355
+          </p>
         </CardContent>
       </Card>
     </div>

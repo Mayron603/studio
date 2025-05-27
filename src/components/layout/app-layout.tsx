@@ -66,9 +66,10 @@ export function AppLayout({ children }: AppLayoutProps) {
             <Image
               src={logoImage}
               alt={`${APP_NAME} Logo`}
-              width={408}
+              width={408} 
               height={612}
               className="h-7 w-auto group-data-[collapsible=icon]:h-6 group-data-[collapsible=icon]:w-auto"
+              priority
             />
             <span className="text-lg font-semibold group-data-[collapsible=icon]:hidden">{APP_NAME}</span>
           </Link>
@@ -124,33 +125,38 @@ export function AppLayout({ children }: AppLayoutProps) {
       </Sidebar>
       <SidebarInset className="flex flex-col">
         <header className="sticky top-0 z-10 flex items-center justify-between h-16 px-4 bg-background/80 backdrop-blur-sm border-b md:px-6">
-          <div> {/* Removed md:hidden to make trigger visible on desktop */}
+          <div>
              <SidebarTrigger />
           </div>
           <div className="flex-1 text-center md:text-left">
             {/* Optional: Dynamic Page Title can go here */}
           </div>
-          {/* Placeholder for User Profile / Actions on the right of header */}
-          {/* 
+          
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon" className="rounded-full">
                 <Avatar className="h-8 w-8">
-                  <AvatarImage src="https://placehold.co/40x40.png" alt="User" data-ai-hint="user avatar" />
+                  <AvatarImage src="https://placehold.co/40x40.png" alt="Usuário" data-ai-hint="user avatar" />
                   <AvatarFallback>UR</AvatarFallback>
                 </Avatar>
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
+            <DropdownMenuContent align="end" className="w-56">
               <DropdownMenuLabel>Minha Conta</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Configurações</DropdownMenuItem>
-              <DropdownMenuItem>Suporte</DropdownMenuItem>
+              <DropdownMenuItem>
+                <Settings className="mr-2 h-4 w-4" />
+                <span>Configurações</span>
+              </DropdownMenuItem>
+              {/* Adicionar mais itens aqui se necessário, ex: Perfil, Suporte */}
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Sair</DropdownMenuItem>
+              <DropdownMenuItem>
+                <LogOut className="mr-2 h-4 w-4" />
+                <span>Sair</span>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          */}
+          
         </header>
         <main className="flex-1 p-4 md:p-6 lg:p-8 overflow-auto">
           {children}
