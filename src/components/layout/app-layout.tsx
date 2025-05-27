@@ -40,7 +40,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 // Import the logo from the project root
-import logoImage from '../../../logo.png';
+import logoImage from '../../../transporte.png';
 
 const navItems: NavItem[] = [
   { href: "/", label: "Início", icon: LayoutDashboard },
