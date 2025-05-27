@@ -1,9 +1,10 @@
 
 import type { LucideIcon } from 'lucide-react';
+import { FileText, Gavel, ClipboardEdit } from 'lucide-react'; // Added this line
 
 export const APP_NAME = "CAVPM";
 export const COMMAND_NAME = "Tinga Tava";
-export const SUB_COMMAND_NAME = "Albert Patrick";
+export const SUB_COMMAND_NAME = "David Silva";
 
 export const HIERARCHY_LEVELS: string[] = [
   "Estagiário",
@@ -80,3 +81,34 @@ export interface NavItem {
   keywords?: string; // for AI hint on icon if needed
 }
 
+export interface QuickLinkItem {
+  id: string;
+  href: string;
+  title: string;
+  description: string;
+  icon: LucideIcon;
+}
+
+export const QUICK_LINKS: QuickLinkItem[] = [
+  {
+    id: "documentos",
+    href: "/documentos",
+    title: "Documentos Oficiais",
+    description: "Acesse manuais e diretrizes importantes.",
+    icon: FileText,
+  },
+  {
+    id: "regulamentos",
+    href: "/regulamentos",
+    title: "Regulamentos",
+    description: "Consulte as normas e procedimentos internos.",
+    icon: Gavel,
+  },
+  {
+    id: "formulario",
+    href: "/formulario",
+    title: "Formulário de Contato",
+    description: "Envie suas solicitações ou entre em contato.",
+    icon: ClipboardEdit,
+  },
+];
