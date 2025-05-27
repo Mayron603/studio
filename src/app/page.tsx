@@ -30,10 +30,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <p className="font-semibold">Comando: {COMMAND_NAME}</p>
-                <p className="font-semibold">Subcomando: {SUB_COMMAND_NAME}</p>
-                <p className="text-sm text-muted-foreground mt-2">
-                  Liderança dedicada à eficiência e segurança da aviação policial.
-                </p>
+                <p className="font-semibold">Comandante Sênior: {SUB_COMMAND_NAME}</p>
               </CardContent>
             </Card>
              {/* Card with image removed

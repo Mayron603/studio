@@ -3,7 +3,7 @@ import type { LucideIcon } from 'lucide-react';
 
 export const APP_NAME = "CAVPM";
 export const COMMAND_NAME = "Tinga Tava";
-export const SUB_COMMAND_NAME = "David Silva";
+export const SUB_COMMAND_NAME = "Albert Patrick";
 
 export const HIERARCHY_LEVELS: string[] = [
   "Estagiário",
