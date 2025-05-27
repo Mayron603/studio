@@ -24,7 +24,7 @@ export default function HistoriaPage() {
             alt="Marco histórico da CAVPM"
             width={1024}
             height={1536}
-            className="rounded-lg object-contain h-auto w-full max-h-[360px] md:max-w-xl mx-auto mb-6 shadow-md"
+            className="rounded-lg object-contain h-auto w-full max-h-[360px] mb-6 shadow-md"
           />
           {HISTORY_PLACEHOLDER.split('\n\n').map((paragraph, index) => (
             <p key={index} className="text-base leading-relaxed text-foreground/90">
