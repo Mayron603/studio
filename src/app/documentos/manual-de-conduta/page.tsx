@@ -1,10 +1,9 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { DOCUMENTS } from "@/lib/constants";
-import { FileText, BookOpen } from "lucide-react";
+import { BookOpen, ChevronLeft, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft } from "lucide-react";
 
 export default function ManualCondutaPage() {
   const doc = DOCUMENTS.find(d => d.slug === "manual-de-conduta");
@@ -35,9 +34,19 @@ export default function ManualCondutaPage() {
               {paragraph}
             </p>
           ))}
+          {doc.documentUrl && (
+            <div className="mt-6">
+              <Link href={doc.documentUrl} target="_blank" rel="noopener noreferrer">
+                <Button variant="default" className="w-full md:w-auto">
+                  <ExternalLink className="mr-2 h-4 w-4" />
+                  Abrir Documento Completo
+                </Button>
+              </Link>
+            </div>
+          )}
            <div className="mt-6 p-4 bg-accent/20 border-l-4 border-accent rounded-md">
             <p className="text-sm text-accent-foreground font-semibold">
-              Este é um resumo informativo. O documento completo e oficial está disponível para consulta interna na unidade.
+              Este é um resumo informativo. O documento completo e oficial {doc.documentUrl ? "também " : ""}está disponível para consulta interna na unidade.
             </p>
           </div>
         </CardContent>
