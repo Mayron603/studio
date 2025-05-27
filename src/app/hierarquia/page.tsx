@@ -1,14 +1,14 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { HIERARCHY_LEVELS } from "@/lib/constants";
-import { Users, ChevronUp, Star, Shield } from "lucide-react";
-
-const icons = [Star, Users, Users, Users, Shield, Shield, ShieldCheckIcon]; // Example icons
+import { Users, ChevronUp, Star, Shield, ShieldCheck } from "lucide-react";
 
 // A more fitting icon for highest rank
 const ShieldCheckIcon = (props: React.ComponentProps<typeof Shield>) => (
-  <Shield {...props} className={`${props.className} fill-primary text-primary-foreground`} />
+  <ShieldCheck {...props} className={`${props.className} fill-primary text-primary-foreground`} />
 );
+
+const icons = [Star, Users, Users, Users, Shield, Shield, ShieldCheckIcon]; // Example icons
 
 
 export default function HierarquiaPage() {
