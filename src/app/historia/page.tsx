@@ -2,8 +2,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { HISTORY_PLACEHOLDER } from "@/lib/constants";
 import { ScrollText } from "lucide-react";
-import Image from "next/image";
-import heliImage from '../../../heli.png';
+// import Image from "next/image";
+// import heliImage from '../../../heli.png'; // Import removed
 
 export default function HistoriaPage() {
   return (
@@ -18,16 +18,8 @@ export default function HistoriaPage() {
             Uma jornada de dedicação e evolução a serviço da comunidade.
           </CardDescription>
         </CardHeader>
-        <Image
-          src={heliImage}
-          alt="Marco histórico da CAVPM"
-          width={1024} // Original width for aspect ratio
-          height={1536} // Original height for aspect ratio
-          className="rounded-lg object-contain w-full max-h-[360px] mb-6 shadow-md"
-          priority // Good to add for LCP images
-        />
-        <CardContent className="space-y-4">
-          {/* Image component was moved above CardContent */}
+        {/* Image component removed from here */}
+        <CardContent className="space-y-4 pt-6"> {/* Added pt-6 to CardContent since image above it was removed */}
           {HISTORY_PLACEHOLDER.split('\n\n').map((paragraph, index) => (
             <p key={index} className="text-base leading-relaxed text-foreground/90">
               {paragraph}
