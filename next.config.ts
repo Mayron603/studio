@@ -19,10 +19,16 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'i.imgur.com', // Added Imgur for user-provided images
+        hostname: 'i.imgur.com', 
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'media.discordapp.net',
+        port: '',
+        pathname: '/**',
+      }
     ],
   },
 };
