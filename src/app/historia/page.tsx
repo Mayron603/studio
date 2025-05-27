@@ -22,8 +22,8 @@ export default function HistoriaPage() {
           <Image 
             src={heliImage} 
             alt="Marco histórico da CAVPM"
-            width={800}
-            height={400}
+            width={600}
+            height={300}
             className="rounded-lg object-cover w-full mb-6 shadow-md"
           />
           {HISTORY_PLACEHOLDER.split('\n\n').map((paragraph, index) => (
