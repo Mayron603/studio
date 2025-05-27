@@ -1,6 +1,6 @@
 
 import type { LucideIcon } from 'lucide-react';
-import { FileText, Gavel, ClipboardEdit } from 'lucide-react'; // Added this line
+import { FileText, Gavel, ClipboardEdit, LayoutDashboard, ScrollText, Users, Plane } from 'lucide-react';
 
 export const APP_NAME = "CAVPM";
 export const COMMAND_NAME = "Tinga Tava";
@@ -22,7 +22,7 @@ export interface DocumentInfo {
   slug: string;
   description: string;
   placeholderContent: string;
-  documentUrl?: string; // Added document URL field
+  documentUrl?: string;
 }
 
 export const DOCUMENTS: DocumentInfo[] = [
@@ -78,8 +78,19 @@ export interface NavItem {
   href: string;
   label: string;
   icon: LucideIcon;
-  keywords?: string; // for AI hint on icon if needed
+  keywords?: string;
 }
+
+export const NAV_ITEMS: NavItem[] = [
+  { href: "/", label: "Início", icon: LayoutDashboard },
+  { href: "/historia", label: "História", icon: ScrollText },
+  { href: "/regulamentos", label: "Regulamentos", icon: Gavel },
+  { href: "/hierarquia", label: "Hierarquia", icon: Users },
+  { href: "/documentos", label: "Documentos", icon: FileText },
+  { href: "/frota", label: "Frota", icon: Plane },
+  { href: "/formulario", label: "Formulário", icon: ClipboardEdit },
+];
+
 
 export interface QuickLinkItem {
   id: string;
@@ -110,5 +121,57 @@ export const QUICK_LINKS: QuickLinkItem[] = [
     title: "Formulário de Contato",
     description: "Envie suas solicitações ou entre em contato.",
     icon: ClipboardEdit,
+  },
+];
+
+export interface AircraftInfo {
+  id: string;
+  name: string;
+  type: string;
+  description: string;
+  imageUrl: string;
+  aiHint: string;
+  specifications: { label: string; value: string }[];
+}
+
+export const FLEET_DATA: AircraftInfo[] = [
+  {
+    id: "as350",
+    name: "Helibras AS350 Esquilo",
+    type: "Helicóptero Utilitário Leve",
+    description: "Versátil e ágil, o AS350 Esquilo é amplamente utilizado para patrulhamento, observação, transporte rápido e missões de apoio. Sua confiabilidade o torna uma peça chave na frota.",
+    imageUrl: "https://placehold.co/600x400.png",
+    aiHint: "police helicopter",
+    specifications: [
+      { label: "Capacidade", value: "1 Piloto + 5 Passageiros" },
+      { label: "Velocidade de Cruzeiro", value: "245 km/h" },
+      { label: "Autonomia", value: "Aprox. 3 horas" },
+    ],
+  },
+  {
+    id: "ec135",
+    name: "Airbus H135 (anteriormente Eurocopter EC135)",
+    type: "Helicóptero Utilitário Leve Bimotor",
+    description: "O H135 é conhecido por sua cabine espaçosa, baixo nível de ruído e performance superior, especialmente em missões aeromédicas e operações policiais que exigem mais capacidade e segurança.",
+    imageUrl: "https://placehold.co/600x400.png",
+    aiHint: "rescue helicopter",
+    specifications: [
+      { label: "Capacidade", value: "1/2 Pilotos + até 6 Passageiros ou 2 macas" },
+      { label: "Velocidade de Cruzeiro", value: "254 km/h" },
+      { label: "Autonomia", value: "Aprox. 3.5 horas" },
+    ],
+  },
+  {
+    id: "kingairc90",
+    name: "Beechcraft King Air C90",
+    type: "Aeronave de Asa Fixa Bimotor Turboélice",
+    description: "Utilizado para transporte de autoridades, equipes especializadas e material para longas distâncias. Oferece maior alcance e capacidade de carga em comparação com os helicópteros.",
+    imageUrl: "https://placehold.co/600x400.png",
+    aiHint: "turboprop plane",
+    specifications: [
+      { label: "Capacidade", value: "1/2 Pilotos + até 7 Passageiros" },
+      { label: "Velocidade de Cruzeiro", value: "400 km/h" },
+      { label: "Alcance", value: "Aprox. 1.800 km" },
+    ],
   },
 ];

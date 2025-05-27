@@ -11,12 +11,12 @@ const nextConfig: NextConfig = {
   },
   images: {
     remotePatterns: [
-      // { // Removed placehold.co as it's no longer used
-      //   protocol: 'https',
-      //   hostname: 'placehold.co',
-      //   port: '',
-      //   pathname: '/**',
-      // }
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+        port: '',
+        pathname: '/**',
+      }
     ],
   },
 };
