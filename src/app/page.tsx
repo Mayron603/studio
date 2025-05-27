@@ -40,7 +40,7 @@ export default function HomePage() {
               <CardContent className="p-0">
                 <Image
                   src="https://placehold.co/600x400.png"
-                  alt="Helicóptero da CAVPM PR-ISI no heliponto"
+                  alt="Helicóptero da Polícia Militar PR-ISI em um heliponto, modelo Eurocopter AS350 Esquilo"
                   width={600}
                   height={400}
                   className="object-cover w-full h-full"
