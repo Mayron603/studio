@@ -148,4 +148,3 @@ export const FLEET_DATA: AircraftInfo[] = [
     ],
   },
 ];
-
