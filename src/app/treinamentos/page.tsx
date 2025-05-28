@@ -6,7 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button";
 import { TRAINING_DATA } from "@/lib/constants";
 import type { TrainingMaterial } from "@/lib/constants";
-import { GraduationCap, AlertTriangle } from "lucide-react";
+import { GraduationCap, AlertTriangle, ClipboardCheck } from "lucide-react"; // Added ClipboardCheck
 import Link from "next/link";
 import { useToast } from "@/hooks/use-toast";
 
