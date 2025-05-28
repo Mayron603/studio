@@ -6,19 +6,28 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button";
 import { TRAINING_DATA } from "@/lib/constants";
 import type { TrainingMaterial } from "@/lib/constants";
-import { GraduationCap, AlertTriangle, ClipboardCheck } from "lucide-react"; // Added ClipboardCheck
+import { GraduationCap, AlertTriangle, ClipboardCheck } from "lucide-react";
 import Link from "next/link";
-import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 
 export default function TreinamentosPage() {
-  const { toast } = useToast();
+  const [isQuizDialogOpen, setIsQuizDialogOpen] = useState(false);
+  const [currentQuizTitle, setCurrentQuizTitle] = useState("");
 
   const handleQuizClick = (quizTitle: string) => {
-    toast({
-      title: "Quiz em Desenvolvimento",
-      description: `O quiz "${quizTitle}" ainda não está disponível. Tente novamente mais tarde.`,
-      variant: "default",
-    });
+    setCurrentQuizTitle(quizTitle);
+    setIsQuizDialogOpen(true);
   };
 
   const renderMaterialContent = (material: TrainingMaterial) => {
@@ -144,6 +153,22 @@ export default function TreinamentosPage() {
           </p>
         </CardContent>
       </Card>
+
+      <AlertDialog open={isQuizDialogOpen} onOpenChange={setIsQuizDialogOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Quiz: {currentQuizTitle}</AlertDialogTitle>
+            <AlertDialogDescription>
+              Esta funcionalidade de quiz está atualmente em desenvolvimento. Em breve, você poderá testar seus conhecimentos aqui.
+              <br /><br />
+              Por enquanto, este é um exemplo de como um quiz seria apresentado. Obrigado pela sua compreensão!
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogAction onClick={() => setIsQuizDialogOpen(false)}>Entendido</AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
