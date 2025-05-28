@@ -1,17 +1,19 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { HIERARCHY_LEVELS, SUB_COMMAND_NAME } from "@/lib/constants";
+import { HIERARCHY_LEVELS } from "@/lib/constants";
 import { Users, ChevronUp, Star, Shield, ShieldCheck } from "lucide-react";
 
-// A more fitting icon for highest rank
-const ShieldCheckIcon = (props: React.ComponentProps<typeof Shield>) => (
+// Ícone personalizado para o posto mais alto
+const ShieldCheckIcon = (props: React.ComponentProps<typeof ShieldCheck>) => (
   <ShieldCheck {...props} className={`${props.className} fill-primary text-primary-foreground`} />
 );
 
-const icons = [Star, Users, Users, Users, Shield, Shield, ShieldCheckIcon]; // Example icons
-
+// Ícones na ordem decrescente da hierarquia
+const orderedIcons = [ShieldCheckIcon, Shield, Shield, Users, Users, Users, Star];
 
 export default function HierarquiaPage() {
+  const reversedHierarchyLevels = [...HIERARCHY_LEVELS].reverse();
+
   return (
     <div className="space-y-6">
       <Card className="shadow-lg">
@@ -21,13 +23,13 @@ export default function HierarquiaPage() {
             <CardTitle className="text-3xl font-bold">Hierarquia CAVPM</CardTitle>
           </div>
           <CardDescription className="text-lg">
-            Estrutura de postos e graduações da Coordenadoria de Aviação.
+            Estrutura de postos e graduações da CAVPM.
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            {HIERARCHY_LEVELS.map((level, index) => {
-              const IconComponent = icons[index % icons.length] || Users; // Fallback icon
+            {reversedHierarchyLevels.map((level, index) => {
+              const IconComponent = orderedIcons[index] || Users; // Fallback icon
               let personnelInfo = null;
 
               if (level === "Comando de Unidade") {
@@ -52,7 +54,7 @@ export default function HierarquiaPage() {
                     <div className="flex-grow">
                       <h3 className="text-lg font-semibold text-primary">{level}</h3>
                       {personnelInfo}
-                      <p className="text-sm text-muted-foreground mt-1">Nível {index + 1} da estrutura hierárquica.</p>
+                      {/* Texto do nível removido */}
                     </div>
                     <ChevronUp className="w-5 h-5 text-muted-foreground transform rotate-90" />
                   </CardContent>
