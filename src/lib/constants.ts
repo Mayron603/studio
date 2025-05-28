@@ -1,6 +1,6 @@
 
 import type { LucideIcon } from 'lucide-react';
-import { FileText, Gavel, ClipboardEdit, LayoutDashboard, ScrollText, Users, Plane, Target } from 'lucide-react'; // Added Target
+import { FileText, Gavel, ClipboardEdit, LayoutDashboard, ScrollText, Users, Plane, Target } from 'lucide-react';
 
 export const APP_NAME = "CAVPM";
 export const COMMAND_NAME = "Tinga Tava";
@@ -47,7 +47,7 @@ export const DOCUMENTS: DocumentInfo[] = [
 export const GOOGLE_FORM_URL = "https://forms.gle/JNC6fvDMG8TbVmV98";
 
 export const HISTORY_PLACEHOLDER = `
-O Comando de Aviação da Polícia Militar do Estado de São Paulo (CAVPM) representa um marco na modernização e eficácia das forças de segurança locais. Fundada em 15 de março de 1998, a CAVPM nasceu da crescente necessidade de um suporte aéreo ágil e especializado para as diversas operações policiais no Estado de São Paulo, uma região em franca expansão.
+O Comando de Aviação da Polícia Militar do Estado de São Paulo (CAVPM) da cidade de Grande Metrópole representa um marco na modernização e eficácia das forças de segurança locais. Fundada em 15 de março de 1998, a CAVPM nasceu da crescente necessidade de um suporte aéreo ágil e especializado para as diversas operações policiais no Estado de São Paulo, uma região em franca expansão.
 
 Nos seus primórdios, a unidade contava com apenas duas aeronaves modelo Esquilo AS350 e uma equipe de pilotos e mecânicos visionários, que enfrentaram o desafio de estruturar do zero os protocolos de operação e manutenção. As primeiras missões focavam em patrulhamento preventivo, acompanhamento tático e resgates em áreas de difícil acesso, demonstrando rapidamente o valor inestimável do componente aéreo.
 
@@ -148,3 +148,4 @@ export const FLEET_DATA: AircraftInfo[] = [
     ],
   },
 ];
+
