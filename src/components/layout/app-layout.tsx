@@ -17,7 +17,7 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
-import { APP_NAME, NAV_ITEMS } from "@/lib/constants"; // Updated to NAV_ITEMS
+import { APP_NAME, NAV_ITEMS } from "@/lib/constants";
 import {
   LayoutDashboard,
   ScrollText,
@@ -25,25 +25,13 @@ import {
   Users,
   FileText,
   ClipboardEdit,
-  Plane, // Added Plane icon
-  // Settings, // Removed
-  // LogOut, // Removed
+  Plane,
+  Image as ImageIcon, // Renomeado para evitar conflito com a tag Image do Next
+  GraduationCap,
 } from "lucide-react";
 import type { NavItem } from "@/lib/constants";
-// import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"; // Removed
-// import {
-//   DropdownMenu,
-//   DropdownMenuContent,
-//   DropdownMenuItem,
-//   DropdownMenuLabel,
-//   DropdownMenuSeparator,
-//   DropdownMenuTrigger,
-// } from "@/components/ui/dropdown-menu"; // Removed
 
-// Import the logo from the project root
 import logoImage from '../../../transporte.png';
-
-// Moved navItems to constants.ts, now importing NAV_ITEMS
 
 interface AppLayoutProps {
   children: ReactNode;
@@ -60,7 +48,7 @@ export function AppLayout({ children }: AppLayoutProps) {
             <Image
               src={logoImage}
               alt={`${APP_NAME} Logo`}
-              width={408}
+              width={408} 
               height={612}
               className="h-7 w-auto group-data-[collapsible=icon]:h-6 group-data-[collapsible=icon]:w-auto"
               priority
@@ -70,12 +58,12 @@ export function AppLayout({ children }: AppLayoutProps) {
         </SidebarHeader>
         <SidebarContent className="p-2">
           <SidebarMenu>
-            {NAV_ITEMS.map((item) => ( // Using NAV_ITEMS from constants
+            {NAV_ITEMS.map((item) => (
               <SidebarMenuItem key={item.href}>
                 <Link href={item.href} legacyBehavior passHref>
                   <SidebarMenuButton
                     asChild
-                    isActive={pathname === item.href}
+                    isActive={pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href))}
                     tooltip={{ children: item.label, className: "bg-popover text-popover-foreground" }}
                     className="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground data-[active=true]:bg-sidebar-primary data-[active=true]:text-sidebar-primary-foreground"
                   >
@@ -93,12 +81,11 @@ export function AppLayout({ children }: AppLayoutProps) {
       <SidebarInset className="flex flex-col">
         <header className="sticky top-0 z-10 flex items-center justify-between h-16 px-4 bg-background/80 backdrop-blur-sm border-b md:px-6">
           <div>
-             <SidebarTrigger className="md:flex" /> {/* Ensure trigger is always visible */}
+             <SidebarTrigger className="md:flex" />
           </div>
           <div className="flex-1 text-center md:text-left">
             {/* Optional: Dynamic Page Title can go here */}
           </div>
-          {/* User profile DropdownMenu removed */}
         </header>
         <main className="flex-1 p-4 md:p-6 lg:p-8 overflow-auto">
           {children}

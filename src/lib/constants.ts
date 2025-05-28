@@ -1,19 +1,19 @@
 
 import type { LucideIcon } from 'lucide-react';
-import { FileText, Gavel, ClipboardEdit, LayoutDashboard, ScrollText, Users, Plane, Target } from 'lucide-react';
+import { FileText, Gavel, ClipboardEdit, LayoutDashboard, ScrollText, Users, Plane, Image as ImageIcon, GraduationCap, Youtube, ClipboardCheck, Type } from 'lucide-react';
 
 export const APP_NAME = "CAVPM";
 export const COMMAND_NAME = "Tinga Tava";
 export const SUB_COMMAND_NAME = "David Silva";
 
 export const HIERARCHY_LEVELS: string[] = [
-  "Estagiário",
-  "Co Piloto",
-  "Comandante",
-  "Comandante Sênior",
-  "Instrutor",
-  "Instrutor Chefe",
   "Comando de Unidade",
+  "Instrutor Chefe",
+  "Instrutor",
+  "Comandante Sênior",
+  "Comandante",
+  "Co Piloto",
+  "Estagiário",
 ];
 
 export interface DocumentInfo {
@@ -89,6 +89,8 @@ export const NAV_ITEMS: NavItem[] = [
   { href: "/documentos", label: "Documentos", icon: FileText },
   { href: "/frota", label: "Frota", icon: Plane },
   { href: "/formulario", label: "Formulário", icon: ClipboardEdit },
+  { href: "/galeria", label: "Galeria", icon: ImageIcon },
+  { href: "/treinamentos", label: "Treinamentos", icon: GraduationCap },
 ];
 
 
@@ -118,8 +120,8 @@ export const QUICK_LINKS: QuickLinkItem[] = [
   {
     id: "formulario",
     href: "/formulario",
-    title: "Formulário de Contato",
-    description: "Envie suas solicitações ou entre em contato.",
+    title: "Formulário de Inscrição",
+    description: "Inscreva-se para o processo seletivo.",
     icon: ClipboardEdit,
   },
 ];
@@ -148,3 +150,85 @@ export const FLEET_DATA: AircraftInfo[] = [
     ],
   },
 ];
+
+
+export interface GalleryImage {
+  id: string;
+  src: string;
+  alt: string;
+  title: string;
+  description: string;
+  aiHint: string;
+}
+
+export const GALLERY_IMAGES: GalleryImage[] = [
+  { id: 'img1', src: 'https://placehold.co/600x400.png', alt: 'Aeronave em patrulha', title: 'Patrulha Aérea', description: 'Nossas aeronaves em constante vigilância.', aiHint: 'helicopter patrol' },
+  { id: 'img2', src: 'https://placehold.co/600x400.png', alt: 'Equipe em treinamento', title: 'Treinamento de Equipe', description: 'Capacitação contínua para missões complexas.', aiHint: 'police training' },
+  { id: 'img3', src: 'https://placehold.co/600x400.png', alt: 'Helicóptero sobrevoando a cidade', title: 'Visão Panorâmica', description: 'Cobertura aérea estratégica da cidade.', aiHint: 'city aerial' },
+  { id: 'img4', src: 'https://placehold.co/600x400.png', alt: 'Operação de resgate', title: 'Missão de Resgate', description: 'Agilidade e precisão em salvamentos.', aiHint: 'rescue operation' },
+  { id: 'img5', src: 'https://placehold.co/600x400.png', alt: 'Manutenção de aeronave', title: 'Manutenção Preventiva', description: 'Garantindo a segurança e operacionalidade da frota.', aiHint: 'aircraft maintenance' },
+  { id: 'img6', src: 'https://placehold.co/600x400.png', alt: 'Vista da cabine do piloto', title: 'Cockpit View', description: 'A perspectiva do piloto em missão.', aiHint: 'cockpit view' },
+];
+
+// --- Training Area Constants ---
+export interface TrainingMaterial {
+  id: string;
+  title: string;
+  type: 'document' | 'video' | 'quiz' | 'instruction';
+  description: string;
+  content?: string; // For instructions or quiz details
+  url?: string; // For documents or external quizzes/videos
+  icon: LucideIcon;
+}
+
+export interface TrainingCategory {
+  id: string;
+  title: string;
+  description: string;
+  materials: TrainingMaterial[];
+}
+
+export const TRAINING_DATA: TrainingCategory[] = [
+  {
+    id: 'basico',
+    title: 'Módulo Básico de Pilotagem',
+    description: 'Fundamentos essenciais para novos pilotos e reciclagem.',
+    materials: [
+      { id: 'bas_doc_01', title: 'Manual de Procedimentos Padrão (MPP)', type: 'document', description: 'Normas e procedimentos básicos de voo.', url: '#', icon: FileText },
+      { id: 'bas_vid_01', title: 'Vídeo: Inspeção Pré-Voo AS350', type: 'video', description: 'Demonstração completa da inspeção pré-voo.', url: '#', icon: Youtube },
+      { id: 'bas_inst_01', title: 'Instrução: Comunicação Aeronáutica', type: 'instruction', description: 'Princípios de fraseologia e comunicação com órgãos ATC.', content: 'Este módulo cobre os padrões de comunicação, o alfabeto fonético internacional e as frases comuns usadas em comunicações aeronáuticas. Pratique os cenários fornecidos.', icon: Type },
+      { id: 'bas_quiz_01', title: 'Quiz: Conhecimentos Aeronáuticos Básicos', type: 'quiz', description: 'Teste seus conhecimentos sobre regulamentos e aerodinâmica.', icon: ClipboardCheck },
+    ]
+  },
+  {
+    id: 'avancado',
+    title: 'Táticas Avançadas de Operação Aérea',
+    description: 'Técnicas e procedimentos para missões policiais complexas.',
+    materials: [
+      { id: 'ava_doc_01', title: 'Manual de Operações Especiais (MOE)', type: 'document', description: 'Protocolos para missões de alto risco e apoio tático.', url: '#', icon: FileText },
+      { id: 'ava_vid_01', title: 'Vídeo: Voo Tático em Formação', type: 'video', description: 'Técnicas de voo em formação com múltiplas aeronaves.', url: '#', icon: Youtube },
+      { id: 'ava_inst_01', title: 'Instrução: Uso de Equipamentos Especiais', type: 'instruction', description: 'Operação de FLIR, farol de busca e outros equipamentos.', content: 'Este módulo detalha a operação e as melhores práticas para o uso de imageadores térmicos (FLIR), faróis de busca de alta intensidade e sistemas de transmissão de vídeo em tempo real. Inclui procedimentos de manutenção básica e troubleshooting.', icon: Type },
+      { id: 'ava_quiz_01', title: 'Simulado: Gerenciamento de Crise Aérea', type: 'quiz', description: 'Teste sua tomada de decisão em cenários críticos.', icon: ClipboardCheck },
+    ]
+  },
+  {
+    id: 'manutencao',
+    title: 'Manutenção Preventiva e Corretiva',
+    description: 'Procedimentos e conhecimentos para a equipe de manutenção.',
+    materials: [
+      { id: 'man_doc_01', title: 'Guia Técnico AS350 - Motor Arriel', type: 'document', description: 'Detalhes técnicos e procedimentos de manutenção do motor.', url: '#', icon: FileText },
+      { id: 'man_vid_01', title: 'Vídeo: Substituição de Componentes Críticos', type: 'video', description: 'Demonstração de substituição de pás do rotor e outros.', url: '#', icon: Youtube },
+    ]
+  }
+];
+// --- End Training Area Constants ---
+
+// Placeholder para simular dados do formulário, se necessário no futuro
+export interface FormSubmissionData {
+  fullName: string;
+  email: string;
+  birthDate: Date;
+  areaOfInterest: string;
+  message: string;
+  agreedToTerms: boolean;
+}
