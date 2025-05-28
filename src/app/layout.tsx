@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: APP_NAME,
-  description: `Portal Digital da ${APP_NAME} - Polícia da Cidade de Grande Metrópole`,
+  description: `Portal Digital do ${APP_NAME} - Comando de Aviação da Polícia Militar do Estado de São Paulo`,
 };
 
 export default function RootLayout({

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { COMMAND_NAME, SUB_COMMAND_NAME, APP_NAME, QUICK_LINKS } from "@/lib/constants";
 import { Users, ShieldCheck, Target, ArrowRight, FileText, Gavel, ClipboardEdit, Contact } from "lucide-react";
 
+
 // Helper to map icon names from constants to actual components
 const iconMap: { [key: string]: React.ElementType } = {
   FileText: FileText,
@@ -23,13 +24,13 @@ export default function HomePage() {
             <CardTitle className="text-3xl font-bold">Bem-vindo ao {APP_NAME}</CardTitle>
           </div>
           <CardDescription className="text-lg">
-            O portal digital da Coordenadoria de Aviação da Polícia Militar de Grande Metrópole.
+            O portal digital do Comando de Aviação da Polícia Militar do Estado de São Paulo.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
           <p className="text-base leading-relaxed text-foreground/90">
             Navegue pelo nosso portal para conhecer mais sobre nossa história, estrutura, regulamentos e documentos importantes.
-            Estamos comprometidos com a transparência e a excelência no serviço à comunidade de Grande Metrópole.
+            Estamos comprometidos com a transparência e a excelência no serviço à comunidade do Estado de São Paulo.
           </p>
           <Card>
             <CardHeader className="flex flex-row items-center space-x-3 pb-2">
@@ -52,7 +53,7 @@ export default function HomePage() {
         <CardContent>
           <p className="text-base leading-relaxed text-foreground/90">
             Prover suporte aéreo especializado às operações policiais, visando a preservação da ordem pública,
-            a proteção da vida e do patrimônio, e a promoção da segurança para todos os cidadãos de Grande Metrópole,
+            a proteção da vida e do patrimônio, e a promoção da segurança para todos os cidadãos do Estado de São Paulo,
             atuando com profissionalismo, técnica e coragem.
           </p>
         </CardContent>
