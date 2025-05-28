@@ -1,6 +1,6 @@
 
 import type { LucideIcon } from 'lucide-react';
-import { FileText, Gavel, ClipboardEdit, LayoutDashboard, ScrollText, Users, Plane, Image as ImageIcon, GraduationCap, Youtube, ClipboardCheck, Type } from 'lucide-react';
+import { FileText, Gavel, ClipboardEdit, LayoutDashboard, ScrollText, Users, Plane, Image as ImageIcon, GraduationCap, Youtube, ClipboardCheck, Type, Contact } from 'lucide-react';
 
 export const APP_NAME = "CAVPM";
 export const COMMAND_NAME = "Tinga Tava";
@@ -232,3 +232,5 @@ export interface FormSubmissionData {
   message: string;
   agreedToTerms: boolean;
 }
+
+    
