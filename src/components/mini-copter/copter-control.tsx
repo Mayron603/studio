@@ -29,7 +29,7 @@ const HelicopterSVG = () => (
     <circle cx="3" cy="19" r="2" className="fill-primary/70" />
     {/* Skids */}
     <rect x="15" y="25" width="30" height="2" rx="1" />
-    <rect x="20"sl y="22" width="2" height="3" rx="1" />
+    <rect x="20" y="22" width="2" height="3" rx="1" />
     <rect x="38" y="22" width="2" height="3" rx="1" />
   </svg>
 );
