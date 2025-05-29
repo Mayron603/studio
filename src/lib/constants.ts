@@ -158,16 +158,16 @@ export interface GalleryImage {
   alt: string;
   title: string;
   description: string;
-  aiHint: string;
+  aiHint: string; // Max two words, space-separated for data-ai-hint attribute
 }
 
 export const GALLERY_IMAGES: GalleryImage[] = [
-  { id: 'img1', src: 'https://placehold.co/600x400.png', alt: 'Aeronave em patrulha sobre a cidade', title: 'Patrulha Aérea Urbana', description: 'Nossas aeronaves em constante vigilância sobre a metrópole, garantindo a segurança.', aiHint: 'helicopter patrol city' },
-  { id: 'img2', src: 'https://placehold.co/600x400.png', alt: 'Equipe de pilotos e tripulantes em treinamento tático', title: 'Treinamento de Equipe', description: 'Capacitação contínua para missões complexas e de alto risco.', aiHint: 'police training tactical' },
-  { id: 'img3', src: 'https://placehold.co/600x400.png', alt: 'Helicóptero AS350 Esquilo sobrevoando área de mata', title: 'Operação em Área Remota', description: 'Cobertura aérea estratégica em diversas paisagens do estado.', aiHint: 'helicopter forest' },
-  { id: 'img4', src: 'https://placehold.co/600x400.png', alt: 'Aeronave da CAVPM em missão de resgate aeromédico', title: 'Missão de Resgate Aeromédico', description: 'Agilidade e precisão no salvamento e transporte de vidas.', aiHint: 'rescue helicopter medical' },
-  { id: 'img5', src: 'https://placehold.co/600x400.png', alt: 'Mecânico realizando manutenção preventiva em helicóptero', title: 'Manutenção Preventiva', description: 'Garantindo a segurança e operacionalidade da frota com rigor técnico.', aiHint: 'aircraft maintenance helicopter' },
-  { id: 'img6', src: 'https://placehold.co/600x400.png', alt: 'Vista da cabine do piloto durante um voo noturno', title: 'Visão Noturna do Cockpit', description: 'A perspectiva do piloto em missões durante o período noturno.', aiHint: 'cockpit view night' },
+  { id: 'img1', src: 'https://source.unsplash.com/featured/600x400/?helicopter,city,police', alt: 'Aeronave em patrulha sobre a cidade', title: 'Patrulha Aérea Urbana', description: 'Nossas aeronaves em constante vigilância sobre a metrópole, garantindo a segurança.', aiHint: 'helicopter city' },
+  { id: 'img2', src: 'https://source.unsplash.com/featured/600x400/?police,training,tactical', alt: 'Equipe de pilotos e tripulantes em treinamento tático', title: 'Treinamento de Equipe', description: 'Capacitação contínua para missões complexas e de alto risco.', aiHint: 'police training' },
+  { id: 'img3', src: 'https://source.unsplash.com/featured/600x400/?helicopter,forest,aerial', alt: 'Helicóptero AS350 Esquilo sobrevoando área de mata', title: 'Operação em Área Remota', description: 'Cobertura aérea estratégica em diversas paisagens do estado.', aiHint: 'helicopter forest' },
+  { id: 'img4', src: 'https://source.unsplash.com/featured/600x400/?rescue,helicopter,medical', alt: 'Aeronave da CAVPM em missão de resgate aeromédico', title: 'Missão de Resgate Aeromédico', description: 'Agilidade e precisão no salvamento e transporte de vidas.', aiHint: 'rescue helicopter' },
+  { id: 'img5', src: 'https://source.unsplash.com/featured/600x400/?aircraft,maintenance,helicopter', alt: 'Mecânico realizando manutenção preventiva em helicóptero', title: 'Manutenção Preventiva', description: 'Garantindo a segurança e operacionalidade da frota com rigor técnico.', aiHint: 'aircraft maintenance' },
+  { id: 'img6', src: 'https://source.unsplash.com/featured/600x400/?cockpit,night,aviation', alt: 'Vista da cabine do piloto durante um voo noturno', title: 'Visão Noturna do Cockpit', description: 'A perspectiva do piloto em missões durante o período noturno.', aiHint: 'cockpit night' },
 ];
 
 // --- Training Area Constants ---
