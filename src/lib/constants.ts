@@ -202,25 +202,6 @@ export const TRAINING_DATA: TrainingCategory[] = [
       { id: 'bas_vid_01', title: 'Vídeo: Inspeção Pré-Voo AS350', type: 'video', description: 'Demonstração completa da inspeção pré-voo.', url: '#', icon: Youtube }, // URL placeholder
       { id: 'bas_inst_01', title: 'Instrução: Comunicação Aeronáutica', type: 'instruction', description: 'Princípios de fraseologia e comunicação com órgãos ATC.', content: 'Este módulo cobre os padrões de comunicação, o alfabeto fonético internacional e as frases comuns usadas em comunicações aeronáuticas. Pratique os cenários fornecidos.', icon: Type },
     ]
-  },
-  {
-    id: 'avancado',
-    title: 'Táticas Avançadas de Operação Aérea',
-    description: 'Técnicas e procedimentos para missões policiais complexas.',
-    materials: [
-      { id: 'ava_doc_01', title: 'Manual de Operações Especiais (MOE)', type: 'document', description: 'Protocolos para missões de alto risco e apoio tático.', url: '#', icon: FileText }, // URL placeholder
-      { id: 'ava_vid_01', title: 'Vídeo: Voo Tático em Formação', type: 'video', description: 'Técnicas de voo em formação com múltiplas aeronaves.', url: '#', icon: Youtube }, // URL placeholder
-      { id: 'ava_inst_01', title: 'Instrução: Uso de Equipamentos Especiais', type: 'instruction', description: 'Operação de FLIR, farol de busca e outros equipamentos.', content: 'Este módulo detalha a operação e as melhores práticas para o uso de imageadores térmicos (FLIR), faróis de busca de alta intensidade e sistemas de transmissão de vídeo em tempo real. Inclui procedimentos de manutenção básica e troubleshooting.', icon: Type },
-    ]
-  },
-  {
-    id: 'manutencao',
-    title: 'Manutenção Preventiva e Corretiva',
-    description: 'Procedimentos e conhecimentos para a equipe de manutenção.',
-    materials: [
-      { id: 'man_doc_01', title: 'Guia Técnico AS350 - Motor Arriel', type: 'document', description: 'Detalhes técnicos e procedimentos de manutenção do motor.', url: '#', icon: FileText }, // URL placeholder
-      { id: 'man_vid_01', title: 'Vídeo: Substituição de Componentes Críticos', type: 'video', description: 'Demonstração de substituição de pás do rotor e outros.', url: '#', icon: Youtube }, // URL placeholder
-    ]
   }
 ];
 // --- End Training Area Constants ---
