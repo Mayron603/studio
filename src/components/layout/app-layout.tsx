@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
 import { APP_NAME, NAV_ITEMS } from "@/lib/constants";
+import { ThemeToggleButton } from "@/components/theme-toggle-button";
 import {
   LayoutDashboard,
   ScrollText,
@@ -28,11 +29,14 @@ import {
   Plane,
   Image as ImageIcon, 
   GraduationCap,
-  Gamepad2, // Added Gamepad2
+  Gamepad2,
+  ShieldAlert, // Assuming this was for the removed safety briefing, can be reused or removed if not needed
 } from "lucide-react";
-import type { NavItem } from "@/lib/constants";
+import type { NavItem } from "@/lib/constants"; // Ensure NavItem type is imported
+import type { LucideIcon } from "lucide-react"; // Ensure LucideIcon type is imported
 
-import logoImage from '../../../transporte.png'; // Assuming transporte.png is the logo
+
+import logoImage from '../../../transporte.png';
 
 interface AppLayoutProps {
   children: ReactNode;
@@ -48,7 +52,8 @@ const iconMap: { [key: string]: LucideIcon } = {
   Plane,
   ImageIcon,
   GraduationCap,
-  Gamepad2, // Added Gamepad2
+  Gamepad2,
+  ShieldAlert,
 };
 
 export function AppLayout({ children }: AppLayoutProps) {
@@ -73,7 +78,7 @@ export function AppLayout({ children }: AppLayoutProps) {
         <SidebarContent className="p-2">
           <SidebarMenu>
             {NAV_ITEMS.map((item) => {
-               const IconComponent = iconMap[item.icon.displayName || item.icon.name] || LayoutDashboard;
+               const IconComponent = iconMap[item.icon?.displayName || item.icon?.name || 'LayoutDashboard'] || LayoutDashboard;
                return (
                 <SidebarMenuItem key={item.href}>
                   <Link href={item.href} legacyBehavior passHref>
@@ -97,11 +102,14 @@ export function AppLayout({ children }: AppLayoutProps) {
       </Sidebar>
       <SidebarInset className="flex flex-col">
         <header className="sticky top-0 z-10 flex items-center justify-between h-16 px-4 bg-background/80 backdrop-blur-sm border-b md:px-6">
-          <div>
-             <SidebarTrigger className="md:flex" />
+          <div className="md:flex"> {/* Ensures trigger is part of layout flow */}
+             <SidebarTrigger />
           </div>
           <div className="flex-1 text-center md:text-left">
             {/* Optional: Dynamic Page Title can go here */}
+          </div>
+          <div>
+            <ThemeToggleButton />
           </div>
         </header>
         <main className="flex-1 p-4 md:p-6 lg:p-8 overflow-auto">
@@ -111,5 +119,3 @@ export function AppLayout({ children }: AppLayoutProps) {
     </SidebarProvider>
   );
 }
-
-    
