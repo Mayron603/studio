@@ -141,7 +141,7 @@ export const FLEET_DATA: AircraftInfo[] = [
     type: "Helicóptero Utilitário Leve",
     description: "Versátil e ágil, o AS350 Esquilo é amplamente utilizado para patrulhamento, observação, transporte rápido e missões de apoio. Sua confiabilidade o torna a peça chave na frota da CAVPM, operando com excelência em diversas condições.",
     specifications: [
-      { label: "Capacidade", value: "1 Piloto + 5 Passageiros" },
+      { label: "Capacidade", value: "1 Piloto + 3 Tripulantes (Copiloto, Atirador Delta, Atirador Echo)" },
       { label: "Velocidade de Cruzeiro", value: "245 km/h (132 kt)" },
       { label: "Autonomia", value: "Aprox. 3 horas / 660 km" },
       { label: "Motor", value: "Turbomeca Arriel 2B" },
