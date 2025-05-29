@@ -1,6 +1,6 @@
 
 import type { LucideIcon } from 'lucide-react';
-import { FileText, Gavel, ClipboardEdit, LayoutDashboard, ScrollText, Users, Plane, Image as ImageIcon, GraduationCap, Youtube, ClipboardCheck, Type, Contact, Target } from 'lucide-react'; // Removed ShieldAlert
+import { FileText, Gavel, ClipboardEdit, LayoutDashboard, ScrollText, Users, Plane, Image as ImageIcon, GraduationCap, Youtube, ClipboardCheck, Type, Contact, Target, Gamepad2 } from 'lucide-react';
 
 export const APP_NAME = "CAVPM";
 export const COMMAND_NAME = "Tinga Tava";
@@ -91,7 +91,7 @@ export const NAV_ITEMS: NavItem[] = [
   { href: "/formulario", label: "Formulário", icon: ClipboardEdit },
   { href: "/galeria", label: "Galeria", icon: ImageIcon },
   { href: "/treinamentos", label: "Treinamentos", icon: GraduationCap },
-  // { href: "/safety-briefing", label: "Briefing de Segurança", icon: ShieldAlert }, // Removed
+  { href: "/mini-copter", label: "Mini Copter", icon: Gamepad2 },
 ];
 
 
@@ -212,8 +212,6 @@ export interface FormSubmissionData {
   message: string;
   agreedToTerms: boolean;
 }
-
-// Removed OPERATION_TYPES constant
     
 
     

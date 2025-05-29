@@ -28,11 +28,11 @@ import {
   Plane,
   Image as ImageIcon, 
   GraduationCap,
-  ShieldAlert,
+  Gamepad2, // Added Gamepad2
 } from "lucide-react";
 import type { NavItem } from "@/lib/constants";
 
-import logoImage from '../../../transporte.png';
+import logoImage from '../../../transporte.png'; // Assuming transporte.png is the logo
 
 interface AppLayoutProps {
   children: ReactNode;
@@ -48,7 +48,7 @@ const iconMap: { [key: string]: LucideIcon } = {
   Plane,
   ImageIcon,
   GraduationCap,
-  ShieldAlert,
+  Gamepad2, // Added Gamepad2
 };
 
 export function AppLayout({ children }: AppLayoutProps) {
@@ -111,3 +111,5 @@ export function AppLayout({ children }: AppLayoutProps) {
     </SidebarProvider>
   );
 }
+
+    
