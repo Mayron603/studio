@@ -26,8 +26,9 @@ import {
   FileText,
   ClipboardEdit,
   Plane,
-  Image as ImageIcon, // Renomeado para evitar conflito com a tag Image do Next
+  Image as ImageIcon, 
   GraduationCap,
+  ShieldAlert,
 } from "lucide-react";
 import type { NavItem } from "@/lib/constants";
 
@@ -36,6 +37,19 @@ import logoImage from '../../../transporte.png';
 interface AppLayoutProps {
   children: ReactNode;
 }
+
+const iconMap: { [key: string]: LucideIcon } = {
+  LayoutDashboard,
+  ScrollText,
+  Gavel,
+  Users,
+  FileText,
+  ClipboardEdit,
+  Plane,
+  ImageIcon,
+  GraduationCap,
+  ShieldAlert,
+};
 
 export function AppLayout({ children }: AppLayoutProps) {
   const pathname = usePathname();
@@ -58,23 +72,26 @@ export function AppLayout({ children }: AppLayoutProps) {
         </SidebarHeader>
         <SidebarContent className="p-2">
           <SidebarMenu>
-            {NAV_ITEMS.map((item) => (
-              <SidebarMenuItem key={item.href}>
-                <Link href={item.href} legacyBehavior passHref>
-                  <SidebarMenuButton
-                    asChild
-                    isActive={pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href))}
-                    tooltip={{ children: item.label, className: "bg-popover text-popover-foreground" }}
-                    className="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground data-[active=true]:bg-sidebar-primary data-[active=true]:text-sidebar-primary-foreground"
-                  >
-                    <a>
-                      <item.icon />
-                      <span>{item.label}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </Link>
-              </SidebarMenuItem>
-            ))}
+            {NAV_ITEMS.map((item) => {
+               const IconComponent = iconMap[item.icon.displayName || item.icon.name] || LayoutDashboard;
+               return (
+                <SidebarMenuItem key={item.href}>
+                  <Link href={item.href} legacyBehavior passHref>
+                    <SidebarMenuButton
+                      asChild
+                      isActive={pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href))}
+                      tooltip={{ children: item.label, className: "bg-popover text-popover-foreground" }}
+                      className="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground data-[active=true]:bg-sidebar-primary data-[active=true]:text-sidebar-primary-foreground"
+                    >
+                      <a>
+                        <IconComponent />
+                        <span>{item.label}</span>
+                      </a>
+                    </SidebarMenuButton>
+                  </Link>
+                </SidebarMenuItem>
+              );
+            })}
           </SidebarMenu>
         </SidebarContent>
       </Sidebar>

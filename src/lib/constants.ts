@@ -1,6 +1,6 @@
 
 import type { LucideIcon } from 'lucide-react';
-import { FileText, Gavel, ClipboardEdit, LayoutDashboard, ScrollText, Users, Plane, Image as ImageIcon, GraduationCap, Youtube, ClipboardCheck, Type, Contact, Target } from 'lucide-react';
+import { FileText, Gavel, ClipboardEdit, LayoutDashboard, ScrollText, Users, Plane, Image as ImageIcon, GraduationCap, Youtube, ClipboardCheck, Type, Contact, Target, ShieldAlert } from 'lucide-react';
 
 export const APP_NAME = "CAVPM";
 export const COMMAND_NAME = "Tinga Tava";
@@ -91,6 +91,7 @@ export const NAV_ITEMS: NavItem[] = [
   { href: "/formulario", label: "Formulário", icon: ClipboardEdit },
   { href: "/galeria", label: "Galeria", icon: ImageIcon },
   { href: "/treinamentos", label: "Treinamentos", icon: GraduationCap },
+  { href: "/safety-briefing", label: "Briefing de Segurança", icon: ShieldAlert },
 ];
 
 
@@ -158,7 +159,7 @@ export interface GalleryImage {
   alt: string;
   title: string;
   description: string;
-  aiHint: string; // Max two words, space-separated for data-ai-hint attribute
+  aiHint: string; 
 }
 
 export const GALLERY_IMAGES: GalleryImage[] = [
@@ -170,16 +171,16 @@ export const GALLERY_IMAGES: GalleryImage[] = [
   { id: 'img6', src: 'https://source.unsplash.com/featured/600x400/?cockpit,night,aviation', alt: 'Vista da cabine do piloto durante um voo noturno', title: 'Visão Noturna do Cockpit', description: 'A perspectiva do piloto em missões durante o período noturno.', aiHint: 'cockpit night' },
 ];
 
-// --- Training Area Constants ---
+
 export interface TrainingMaterial {
   id: string;
   title: string;
   type: 'document' | 'video' | 'quiz' | 'instruction';
   description: string;
-  content?: string; // For instructions or quiz details
-  url?: string; // For documents or external quizzes/videos
+  content?: string; 
+  url?: string; 
   icon: LucideIcon;
-  quizSlug?: string; // Slug to identify the quiz in quiz-data.ts
+  quizSlug?: string; 
 }
 
 export interface TrainingCategory {
@@ -202,9 +203,7 @@ export const TRAINING_DATA: TrainingCategory[] = [
     ]
   }
 ];
-// --- End Training Area Constants ---
 
-// Placeholder para simular dados do formulário, se necessário no futuro
 export interface FormSubmissionData {
   fullName: string;
   email: string;
@@ -213,6 +212,15 @@ export interface FormSubmissionData {
   message: string;
   agreedToTerms: boolean;
 }
-    
 
+export const OPERATION_TYPES = [
+  { value: "patrulhamento_urbano_diurno", label: "Patrulhamento Urbano Diurno" },
+  { value: "patrulhamento_urbano_noturno", label: "Patrulhamento Urbano Noturno" },
+  { value: "busca_salvamento_mata", label: "Busca e Salvamento em Mata" },
+  { value: "apoio_operacoes_especiais", label: "Apoio a Operações Especiais" },
+  { value: "transporte_tropa", label: "Transporte de Tropa" },
+  { value: "voo_reconhecimento", label: "Voo de Reconhecimento" },
+  { value: "resgate_aeromedico", label: "Resgate Aeromédico" },
+  { value: "combate_incendio_florestal", label: "Combate a Incêndio Florestal (com Bambi Bucket)" },
+];
     
