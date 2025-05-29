@@ -199,8 +199,6 @@ export const TRAINING_DATA: TrainingCategory[] = [
       { id: 'bas_quiz_01', title: 'Quiz: Manual de Conduta', type: 'quiz', description: 'Teste seus conhecimentos sobre o Manual de Conduta.', icon: ClipboardCheck, quizSlug: 'manual-de-conduta' },
       { id: 'bas_doc_02', title: 'Manual de Instrução Teórica - CAVPM', type: 'document', description: 'Conhecimentos teóricos essenciais.', url: '/documentos/manual-de-instrucao-teorica', icon: FileText },
       { id: 'bas_quiz_02', title: 'Quiz: Instrução Teórica Básica', type: 'quiz', description: 'Teste seus conhecimentos sobre a Instrução Teórica.', icon: ClipboardCheck, quizSlug: 'manual-de-instrucao-teorica' },
-      { id: 'bas_vid_01', title: 'Vídeo: Inspeção Pré-Voo AS350', type: 'video', description: 'Demonstração completa da inspeção pré-voo.', url: '#', icon: Youtube }, // URL placeholder
-      { id: 'bas_inst_01', title: 'Instrução: Comunicação Aeronáutica', type: 'instruction', description: 'Princípios de fraseologia e comunicação com órgãos ATC.', content: 'Este módulo cobre os padrões de comunicação, o alfabeto fonético internacional e as frases comuns usadas em comunicações aeronáuticas. Pratique os cenários fornecidos.', icon: Type },
     ]
   }
 ];
