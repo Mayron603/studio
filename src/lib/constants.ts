@@ -1,6 +1,6 @@
 
 import type { LucideIcon } from 'lucide-react';
-import { FileText, Gavel, ClipboardEdit, LayoutDashboard, ScrollText, Users, Plane, Image as ImageIcon, GraduationCap, Youtube, ClipboardCheck, Type, Contact, Target, ShieldAlert } from 'lucide-react';
+import { FileText, Gavel, ClipboardEdit, LayoutDashboard, ScrollText, Users, Plane, Image as ImageIcon, GraduationCap, Youtube, ClipboardCheck, Type, Contact, Target } from 'lucide-react'; // Removed ShieldAlert
 
 export const APP_NAME = "CAVPM";
 export const COMMAND_NAME = "Tinga Tava";
@@ -91,7 +91,7 @@ export const NAV_ITEMS: NavItem[] = [
   { href: "/formulario", label: "Formulário", icon: ClipboardEdit },
   { href: "/galeria", label: "Galeria", icon: ImageIcon },
   { href: "/treinamentos", label: "Treinamentos", icon: GraduationCap },
-  { href: "/safety-briefing", label: "Briefing de Segurança", icon: ShieldAlert },
+  // { href: "/safety-briefing", label: "Briefing de Segurança", icon: ShieldAlert }, // Removed
 ];
 
 
@@ -159,7 +159,7 @@ export interface GalleryImage {
   alt: string;
   title: string;
   description: string;
-  aiHint: string; 
+  aiHint: string;
 }
 
 export const GALLERY_IMAGES: GalleryImage[] = [
@@ -177,10 +177,10 @@ export interface TrainingMaterial {
   title: string;
   type: 'document' | 'video' | 'quiz' | 'instruction';
   description: string;
-  content?: string; 
-  url?: string; 
+  content?: string;
+  url?: string;
   icon: LucideIcon;
-  quizSlug?: string; 
+  quizSlug?: string;
 }
 
 export interface TrainingCategory {
@@ -213,14 +213,7 @@ export interface FormSubmissionData {
   agreedToTerms: boolean;
 }
 
-export const OPERATION_TYPES = [
-  { value: "patrulhamento_urbano_diurno", label: "Patrulhamento Urbano Diurno" },
-  { value: "patrulhamento_urbano_noturno", label: "Patrulhamento Urbano Noturno" },
-  { value: "busca_salvamento_mata", label: "Busca e Salvamento em Mata" },
-  { value: "apoio_operacoes_especiais", label: "Apoio a Operações Especiais" },
-  { value: "transporte_tropa", label: "Transporte de Tropa" },
-  { value: "voo_reconhecimento", label: "Voo de Reconhecimento" },
-  { value: "resgate_aeromedico", label: "Resgate Aeromédico" },
-  { value: "combate_incendio_florestal", label: "Combate a Incêndio Florestal (com Bambi Bucket)" },
-];
+// Removed OPERATION_TYPES constant
+    
+
     
