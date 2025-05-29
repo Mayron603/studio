@@ -179,6 +179,7 @@ export interface TrainingMaterial {
   content?: string; // For instructions or quiz details
   url?: string; // For documents or external quizzes/videos
   icon: LucideIcon;
+  quizSlug?: string; // Slug to identify the quiz in quiz-data.ts
 }
 
 export interface TrainingCategory {
@@ -191,13 +192,15 @@ export interface TrainingCategory {
 export const TRAINING_DATA: TrainingCategory[] = [
   {
     id: 'basico',
-    title: 'Módulo Básico de Pilotagem',
-    description: 'Fundamentos essenciais para novos pilotos e reciclagem.',
+    title: 'Módulo Básico de Pilotagem e Conduta',
+    description: 'Fundamentos essenciais e normas de comportamento.',
     materials: [
-      { id: 'bas_doc_01', title: 'Manual de Procedimentos Padrão (MPP)', type: 'document', description: 'Normas e procedimentos básicos de voo.', url: '#', icon: FileText },
+      { id: 'bas_doc_01', title: 'Manual de Conduta - CAVPM', type: 'document', description: 'Normas de comportamento e ética.', url: '/documentos/manual-de-conduta', icon: FileText },
+      { id: 'bas_quiz_01', title: 'Quiz: Manual de Conduta', type: 'quiz', description: 'Teste seus conhecimentos sobre o Manual de Conduta.', icon: ClipboardCheck, quizSlug: 'manual-de-conduta' },
+      { id: 'bas_doc_02', title: 'Manual de Instrução Teórica - CAVPM', type: 'document', description: 'Conhecimentos teóricos essenciais.', url: '/documentos/manual-de-instrucao-teorica', icon: FileText },
+      { id: 'bas_quiz_02', title: 'Quiz: Instrução Teórica Básica', type: 'quiz', description: 'Teste seus conhecimentos sobre a Instrução Teórica.', icon: ClipboardCheck, quizSlug: 'manual-de-instrucao-teorica' },
       { id: 'bas_vid_01', title: 'Vídeo: Inspeção Pré-Voo AS350', type: 'video', description: 'Demonstração completa da inspeção pré-voo.', url: '#', icon: Youtube },
       { id: 'bas_inst_01', title: 'Instrução: Comunicação Aeronáutica', type: 'instruction', description: 'Princípios de fraseologia e comunicação com órgãos ATC.', content: 'Este módulo cobre os padrões de comunicação, o alfabeto fonético internacional e as frases comuns usadas em comunicações aeronáuticas. Pratique os cenários fornecidos.', icon: Type },
-      { id: 'bas_quiz_01', title: 'Quiz: Conhecimentos Aeronáuticos Básicos', type: 'quiz', description: 'Teste seus conhecimentos sobre regulamentos e aerodinâmica.', icon: ClipboardCheck },
     ]
   },
   {
@@ -208,7 +211,7 @@ export const TRAINING_DATA: TrainingCategory[] = [
       { id: 'ava_doc_01', title: 'Manual de Operações Especiais (MOE)', type: 'document', description: 'Protocolos para missões de alto risco e apoio tático.', url: '#', icon: FileText },
       { id: 'ava_vid_01', title: 'Vídeo: Voo Tático em Formação', type: 'video', description: 'Técnicas de voo em formação com múltiplas aeronaves.', url: '#', icon: Youtube },
       { id: 'ava_inst_01', title: 'Instrução: Uso de Equipamentos Especiais', type: 'instruction', description: 'Operação de FLIR, farol de busca e outros equipamentos.', content: 'Este módulo detalha a operação e as melhores práticas para o uso de imageadores térmicos (FLIR), faróis de busca de alta intensidade e sistemas de transmissão de vídeo em tempo real. Inclui procedimentos de manutenção básica e troubleshooting.', icon: Type },
-      { id: 'ava_quiz_01', title: 'Simulado: Gerenciamento de Crise Aérea', type: 'quiz', description: 'Teste sua tomada de decisão em cenários críticos.', icon: ClipboardCheck },
+      { id: 'ava_quiz_01', title: 'Simulado: Gerenciamento de Crise Aérea (Demonstrativo)', type: 'quiz', description: 'Demonstração de tomada de decisão em cenários críticos.', icon: ClipboardCheck, quizSlug: 'manual-de-instrucao-teorica' }, // Reutilizando quizSlug para exemplo
     ]
   },
   {
