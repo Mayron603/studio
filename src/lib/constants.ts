@@ -211,7 +211,6 @@ export const TRAINING_DATA: TrainingCategory[] = [
       { id: 'ava_doc_01', title: 'Manual de Operações Especiais (MOE)', type: 'document', description: 'Protocolos para missões de alto risco e apoio tático.', url: '#', icon: FileText }, // URL placeholder
       { id: 'ava_vid_01', title: 'Vídeo: Voo Tático em Formação', type: 'video', description: 'Técnicas de voo em formação com múltiplas aeronaves.', url: '#', icon: Youtube }, // URL placeholder
       { id: 'ava_inst_01', title: 'Instrução: Uso de Equipamentos Especiais', type: 'instruction', description: 'Operação de FLIR, farol de busca e outros equipamentos.', content: 'Este módulo detalha a operação e as melhores práticas para o uso de imageadores térmicos (FLIR), faróis de busca de alta intensidade e sistemas de transmissão de vídeo em tempo real. Inclui procedimentos de manutenção básica e troubleshooting.', icon: Type },
-      { id: 'ava_quiz_01', title: 'Simulado: Gerenciamento de Crise Aérea (Demonstrativo)', type: 'quiz', description: 'Demonstração de tomada de decisão em cenários críticos.', icon: ClipboardCheck, quizSlug: 'manual-de-instrucao-teorica' }, // Reutilizando quizSlug para exemplo, idealmente seria um novo
     ]
   },
   {
