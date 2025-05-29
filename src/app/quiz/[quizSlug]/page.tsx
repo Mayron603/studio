@@ -10,7 +10,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { CheckCircle, XCircle, ChevronLeft, Info, RotateCcw } from "lucide-react";
+import { CheckCircle, XCircle, ChevronLeft, Info, RotateCcw, ChevronRight } from "lucide-react";
 
 export default function QuizPage() {
   const params = useParams();

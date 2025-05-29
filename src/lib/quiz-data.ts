@@ -26,53 +26,53 @@ export const QUIZZES_DATA: QuizData[] = [
     description: "Teste seus conhecimentos sobre as diretrizes e normas de comportamento da CAVPM.",
     questions: [
       {
-        id: "q1_mc",
-        text: "Qual o principal objetivo do Manual de Conduta da CAVPM?",
+        id: "mc_q1",
+        text: "O que o Manual de Conduta da CAVPM estabelece primordialmente?",
         options: [
-          { id: "a", text: "Definir os horários de voo e missões." },
-          { id: "b", text: "Estabelecer os padrões de comportamento, ética e disciplina para todos os membros." },
-          { id: "c", text: "Listar as especificações técnicas das aeronaves da frota." },
-          { id: "d", text: "Ensinar técnicas de pilotagem para iniciantes." },
+          { id: "a", text: "Horários de voo e planejamento de missões." },
+          { id: "b", text: "Padrões de comportamento, ética e disciplina para todos os membros." },
+          { id: "c", text: "Rotinas de manutenção das aeronaves e checklist de equipamentos." },
+          { id: "d", text: "Protocolos de comunicação externa e relações com a imprensa." },
         ],
         correctOptionId: "b",
-        explanation: "O Manual de Conduta foca em comportamento, ética e disciplina para assegurar integridade e profissionalismo."
+        explanation: "O Manual de Conduta foca em estabelecer padrões de comportamento, ética e disciplina para todos os membros, conforme descrito em seu propósito."
       },
       {
-        id: "q2_mc",
-        text: "Segundo o Manual de Conduta, a adesão às suas normas é:",
+        id: "mc_q2",
+        text: "Para que serve o Manual de Conduta como guia fundamental dentro da CAVPM?",
         options: [
-          { id: "a", text: "Opcional para membros com mais de 5 anos de serviço." },
-          { id: "b", text: "Recomendada, mas flexível dependendo da situação." },
-          { id: "c", text: "Crucial para manter a reputação, eficiência e segurança da CAVPM." },
-          { id: "d", text: "Aplicável apenas durante missões oficiais fora da base." },
+          { id: "a", text: "Para o planejamento de rotas aéreas táticas e estratégicas." },
+          { id: "b", text: "Para assegurar a integridade, o profissionalismo e a excelência nas operações e no dia a dia." },
+          { id: "c", text: "Para definir os critérios de promoção e progressão de carreira dos oficiais." },
+          { id: "d", text: "Para detalhar os manuais técnicos das diferentes aeronaves da frota." },
         ],
-        correctOptionId: "c",
-        explanation: "A adesão estrita é vital para a integridade e o funcionamento da unidade."
+        correctOptionId: "b",
+        explanation: "Ele serve como guia fundamental para assegurar a integridade, o profissionalismo e a excelência nas operações e no cotidiano da unidade."
       },
       {
-        id: "q3_mc",
-        text: "O Manual de Conduta abrange qual dos seguintes aspectos?",
+        id: "mc_q3",
+        text: "Qual dos seguintes tópicos NÃO é diretamente abordado pelo Manual de Conduta, de acordo com o resumo fornecido?",
         options: [
-          { id: "a", text: "Apenas a conduta em missões de combate." },
-          { id: "b", text: "Principalmente o uso de uniformes e apresentação pessoal." },
-          { id: "c", text: "Manutenção de aeronaves e equipamentos de solo." },
-          { id: "d", text: "Apresentação pessoal, relações interpessoais, conduta em missões e manuseio de informações sigilosas." },
+          { id: "a", text: "Apresentação pessoal e o correto uso de uniformes." },
+          { id: "b", text: "As relações interpessoais entre os membros da unidade." },
+          { id: "c", text: "A conduta esperada durante a execução de missões aéreas." },
+          { id: "d", text: "As especificações técnicas detalhadas dos motores das aeronaves." },
         ],
         correctOptionId: "d",
-        explanation: "O manual é abrangente, cobrindo diversos aspectos do comportamento e profissionalismo."
+        explanation: "O manual abrange apresentação pessoal, relações interpessoais, conduta em missões e manuseio de informações, mas não especificações técnicas de aeronaves."
       },
       {
-        id: "q4_mc",
-        text: "O que é fundamental para assegurar a integridade e o profissionalismo na CAVPM, conforme o Manual de Conduta?",
+        id: "mc_q4",
+        text: "Segundo o resumo, por que a adesão estrita ao Manual de Conduta é considerada crucial para a CAVPM?",
         options: [
-          { id: "a", text: "O número de horas de voo individuais." },
-          { id: "b", text: "A antiguidade no posto." },
-          { id: "c", text: "A adesão estrita às normas do Manual de Conduta." },
-          { id: "d", text: "A participação em eventos sociais da unidade." },
+          { id: "a", text: "Para aumentar o número de horas de voo individuais dos pilotos." },
+          { id: "b", text: "Para garantir a obtenção de bonificações salariais por desempenho." },
+          { id: "c", text: "Para manter a reputação e a eficiência da CAVPM perante a sociedade e o comando." },
+          { id: "d", text: "Para simplificar os processos de elaboração de relatórios de missão." },
         ],
         correctOptionId: "c",
-        explanation: "O manual enfatiza que a adesão às suas diretrizes é essencial para a integridade e profissionalismo."
-      },
+        explanation: "A adesão estrita ao manual é crucial para manter a reputação e a eficiência da CAVPM."
+      }
     ],
   },
   {
@@ -81,56 +81,53 @@ export const QUIZZES_DATA: QuizData[] = [
     description: "Avalie seu entendimento sobre os conhecimentos teóricos essenciais para a aviação policial.",
     questions: [
       {
-        id: "q1_mit",
-        text: "Qual dos seguintes tópicos é coberto pelo Manual de Instrução Teórica da CAVPM?",
+        id: "mit_q1",
+        text: "O Manual de Instrução Teórica é descrito como um compêndio de conhecimentos essenciais para qual finalidade principal?",
         options: [
-          { id: "a", text: "Técnicas de interrogatório policial." },
-          { id: "b", text: "Aerodinâmica, meteorologia e navegação aérea." },
-          { id: "c", text: "História da Polícia Militar do Estado de São Paulo." },
-          { id: "d", text: "Manutenção de armamento leve." },
+          { id: "a", text: "Apenas para pilotos que já possuem experiência de voo anterior." },
+          { id: "b", text: "Para a formação e capacitação contínua dos profissionais da aviação policial." },
+          { id: "c", text: "Exclusivamente para a equipe de mecânicos e manutenção de aeronaves." },
+          { id: "d", text: "Para o público externo que deseja conhecer mais sobre as operações da CAVPM." },
         ],
         correctOptionId: "b",
-        explanation: "O manual foca em conhecimentos aeronáuticos como aerodinâmica, meteorologia e navegação."
+        explanation: "O manual é um compêndio abrangente de conhecimentos essenciais para a formação e capacitação contínua dos profissionais da aviação policial."
       },
       {
-        id: "q2_mit",
-        text: "O Manual de Instrução Teórica serve como base para:",
+        id: "mit_q2",
+        text: "Qual dos seguintes temas NÃO é listado como parte do conteúdo coberto pelo Manual de Instrução Teórica, segundo o resumo?",
         options: [
-          { id: "a", text: "O treinamento físico dos membros da CAVPM." },
-          { id: "b", text: "A avaliação psicológica para ingresso na unidade." },
-          { id: "c", text: "O aprendizado teórico, complementando o treinamento prático em voo." },
-          { id: "d", text: "As normas de conduta social dentro da unidade." },
+          { id: "a", text: "Aerodinâmica e princípios de meteorologia aplicada à aviação." },
+          { id: "b", text: "Regulamentos de tráfego aéreo e procedimentos de emergência." },
+          { id: "c", text: "Táticas avançadas de combate terrestre e defesa pessoal." },
+          { id: "d", text: "Fisiologia de voo e especificações técnicas das aeronaves operadas." },
         ],
         correctOptionId: "c",
-        explanation: "O objetivo do manual é fornecer a base teórica que complementa a prática."
+        explanation: "O manual cobre temas aeronáuticos como aerodinâmica, meteorologia, regulamentos, fisiologia de voo e especificações das aeronaves, mas não táticas de combate terrestre."
       },
       {
-        id: "q3_mit",
-        text: "Conforme o conteúdo do Manual de Instrução Teórica, qual o propósito principal deste documento?",
+        id: "mit_q3",
+        text: "O Manual de Instrução Teórica serve como base para o aprendizado teórico, complementando qual outro aspecto fundamental da formação na CAVPM?",
         options: [
-          { id: "a", text: "Garantir que todos os membros possuam conhecimento para operar com segurança e eficácia." },
-          { id: "b", text: "Definir os padrões de comunicação com a imprensa." },
-          { id: "c", text: "Estabelecer o código de uniformes da CAVPM." },
-          { id: "d", text: "Servir como um guia de referência rápida para procedimentos de emergência apenas." },
+          { id: "a", text: "O programa de condicionamento físico e resistência dos membros." },
+          { id: "b", text: "O treinamento prático de voo e simulações de missão." },
+          { id: "c", text: "As atividades administrativas e de gestão da unidade." },
+          { id: "d", text: "As normas de relações públicas e comunicação com a imprensa." },
         ],
-        correctOptionId: "a",
-        explanation: "O manual visa garantir que os membros tenham o conhecimento necessário para operar de forma segura e eficaz."
+        correctOptionId: "b",
+        explanation: "Serve como base para o aprendizado teórico, complementando o treinamento prático."
       },
       {
-        id: "q4_mit",
-        text: "Além de aerodinâmica e meteorologia, que outro tema é fundamental no Manual de Instrução Teórica?",
-        options:
-        [
-          { id: "a", text: "Técnicas de sobrevivência na selva." },
-          { id: "b", text: "Direito penal militar." },
-          { id: "c", text: "Regulamentos de tráfego aéreo e procedimentos de emergência." },
-          { id: "d", text: "História da aviação mundial." },
+        id: "mit_q4",
+        text: "Qual o objetivo final do conhecimento fornecido pelo Manual de Instrução Teórica aos membros da CAVPM?",
+        options: [
+          { id: "a", text: "Permitir que os membros acumulem um maior número de horas de voo em menos tempo." },
+          { id: "b", text: "Garantir que todos os membros possuam o conhecimento necessário para operar com segurança e eficácia." },
+          { id: "c", text: "Qualificar os membros exclusivamente para funções de instrução e ensino dentro da unidade." },
+          { id: "d", text: "Reduzir significativamente os custos operacionais com manutenção das aeronaves." },
         ],
-        correctOptionId: "c",
-        explanation: "Regulamentos de tráfego aéreo e procedimentos de emergência são cruciais para a formação teórica."
+        correctOptionId: "b",
+        explanation: "O objetivo é garantir que todos os membros possuam o conhecimento necessário para operar com segurança e eficácia."
       }
     ],
   },
 ];
-
-    
